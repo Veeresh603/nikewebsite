@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import vector from "./images/vector.png";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import './styles.css'
 
 const Navbar = () => {
   return (
@@ -12,7 +13,7 @@ const Navbar = () => {
             <img src={vector} alt="logo" />
           </Text>
           <Text1>
-            <Link to="/">Home</Link>
+            <Link className="link" to="/">Home</Link>
           </Text1>
           <Text2>
             {" "}
@@ -56,7 +57,6 @@ const Text = styled.span`
   margin-top: 10px;
   text-align: center;
   margin-left: 40px;
-
   .link {
     text-decoration: none;
     color: white;
@@ -64,10 +64,8 @@ const Text = styled.span`
 `;
 
 const Text1 = styled(Text)`
-  &.foo {
-    text-decoration: none;
-    color: white;
-  }
+   
+  
 `;
 
 const Text2 = styled(Text)``;
